@@ -26,7 +26,8 @@ pipeline{
 
         stage("Build DockerImage"){
             steps{
-                echo "========executing A========"
+                sh 'cd awesome-compose/aspnet-mssql/app'
+                sh 'docker build -t demoasp:latest .'
             }
             post{
                 always{

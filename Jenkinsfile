@@ -3,6 +3,7 @@ pipeline{
     stages{
         stage("Checkout Code from Git"){
             steps{
+                  cleanWs()
                 git(
                     url: "https://github.com/heloise-viegas/CICD-JenkinsMinikube.git",
                     branch: "main",
@@ -96,7 +97,7 @@ pipeline{
                  }
             post{
                 always{
-                  cleanWs()
+                echo ""
                 }
                 success{
                     echo "========A executed successfully========"

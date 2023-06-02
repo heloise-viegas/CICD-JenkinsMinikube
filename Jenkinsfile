@@ -26,7 +26,8 @@ pipeline{
 
         stage("Build DockerImage"){
             steps{
-               // sh 'cd awesome-compose/aspnet-mssql/app'
+               sh 'cd awesome-compose'
+                ///aspnet-mssql/app'
                sh 'pwd'
                // sh 'docker build -t demoasp:latest .'
             }

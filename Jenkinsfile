@@ -96,7 +96,7 @@ pipeline{
                  }
             post{
                 always{
-                    echo "========always========"
+                  cleanWs()
                 }
                 success{
                     echo "========A executed successfully========"

@@ -1,0 +1,13 @@
+Name:         jenkins-token
+Namespace:    default
+Labels:       <none>
+Annotations:  kubernetes.io/service-account.name: jenkins
+              kubernetes.io/service-account.uid: 4224bad5-1bfa-4fcd-918e-95958269f39b
+
+Type:  kubernetes.io/service-account-token
+
+Data
+====
+ca.crt:     1111 bytes
+namespace:  7 bytes
+token:      eyJhbGciOiJSUzI1NiIsImtpZCI6Ilo4YU9RX0s2TDZXSkk5M0N2ZEk0cHlLOEZ4cHltN2RPM1dYQXl0dFZCOFUifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJkZWZhdWx0Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6ImplbmtpbnMtdG9rZW4iLCJrdWJlcm5ldGVzLmlvL3NlcnZpY2VhY2NvdW50L3NlcnZpY2UtYWNjb3VudC5uYW1lIjoiamVua2lucyIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VydmljZS1hY2NvdW50LnVpZCI6IjQyMjRiYWQ1LTFiZmEtNGZjZC05MThlLTk1OTU4MjY5ZjM5YiIsInN1YiI6InN5c3RlbTpzZXJ2aWNlYWNjb3VudDpkZWZhdWx0OmplbmtpbnMifQ.ayrF6-PelmpS5AIoJhOQOgACTfNi13Asy3BffwF8FFWfs645bt6kHTduvYSyYJTjiWG9_aH2mye8eEckndp1S771mGPxq_ecGynbH6Ux7ZFm48eoj_oy3uwWzNshNnGI-OT0xpNK0mE5xsabgngrnTp397urmMc8zsdZ1pivAR9v3Tjh2aJUEcUj3D3BUbbrVj5_rcJKEeSYeoA--gC9bs8wkzN3y7lfk-Ht7aAQT4blOVZKVQZX5Bt3r9F3h7e890wi7jgUPplRRwPQ8jgujOBaJxVil_UUh73oDxF0YsmwU7PRsL1Zua6IDrTC5rak0dzC0mq01PLirjcYXKOqxw

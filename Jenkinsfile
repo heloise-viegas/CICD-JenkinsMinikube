@@ -3,7 +3,13 @@ pipeline{
     stages{
         stage("Checkout Code from Git"){
             steps{
-                echo "========executing A========"
+                git(
+                    url: "https://github.com/heloise-viegas/CICD-JenkinsMinikube.git",
+                    branch: "main",
+                    //credentialsId: "REPO_CREDENTIAL_ID_IN_JENKINS",
+                   // changelog: true,
+                   // poll: true
+)
             }
             post{
                 always{

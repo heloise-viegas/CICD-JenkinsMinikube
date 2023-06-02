@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: asp-demo-deploy
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: web
+  template:
+    metadata:
+      labels:
+        app: web
+    spec:
+      containers:
+        - name: web 
+          image: pocimage
+          imagePullPolicy: Never 
+          #503694153160.dkr.ecr.us-east-2.amazonaws.com/eks-asp-demo:latest
+          # busybox
+          # 503694153160.dkr.ecr.ap-northeast-1.amazonaws.com/eks-asp-demo
+          ports:
+            - containerPort: 5000
+
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#   name: nginx-deployment
+#   labels:
+#     app: nginx
+# spec:
+#   replicas: 1
+#   selector:
+#     matchLabels:
+#       app: nginx
+#   template:
+#     metadata:
+#       labels:
+#         app: nginx
+#     spec:
+#       containers:
+#         - name: nginx
+#           image: 'nginx:1.14.2'
+#           ports:
+#             - containerPort: 80

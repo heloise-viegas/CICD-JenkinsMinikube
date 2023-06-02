@@ -82,7 +82,7 @@ pipeline{
 
         stage("Deploy on kubernetes"){
             steps{
-                echo "========executing A========"
+               sh 'kubectl get pods'
             }
             post{
                 always{

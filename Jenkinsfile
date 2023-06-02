@@ -81,10 +81,12 @@ pipeline{
         }
 
         stage("Deploy on kubernetes"){
-            steps{
-               sh 'kubectl get pods'
-            }
-            post{
+           // steps{
+            //   sh 'kubectl get pods'
+           // }
+             withKubeConfig(caCertificate: '', clusterName: 'minikube', contextName: 'minikube', credentialsId: 'kubeconfig', namespace: 'default', restrictKubeConfigAccess: false, serverUrl: 'https://127.0.0.1:32769') {
+     sh 'kubectl get pods'
+}         post{
                 always{
                     echo "========always========"
                 }

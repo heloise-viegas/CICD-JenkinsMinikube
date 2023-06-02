@@ -93,6 +93,10 @@ pipeline{
                             restrictKubeConfigAccess: false, 
                             serverUrl: 'https://127.0.0.1:32769') {
                  sh 'kubectl config use-context minikube'
+                 
+                 sh 'kubectl delete -f /var/lib/jenkins/workspace/CICD-Minikube/awesome-compose/aspnet-mssql/deployment.yaml'
+                 sh 'kubectl delete -f /var/lib/jenkins/workspace/CICD-Minikube/awesome-compose/aspnet-mssql/service.yaml'
+                 
                  sh 'kubectl apply -f /var/lib/jenkins/workspace/CICD-Minikube/awesome-compose/aspnet-mssql/deployment.yaml'
                  sh 'kubectl apply -f /var/lib/jenkins/workspace/CICD-Minikube/awesome-compose/aspnet-mssql/service.yaml'
                  sh 'kubectl get all'

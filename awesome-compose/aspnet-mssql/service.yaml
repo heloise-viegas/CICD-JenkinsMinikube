@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: eks-asp-demo-service
+  name: aspdemosvc
 spec:
-  type: LoadBalancer
-  # NodePort
+  type: NodePort
+  # loadbalancer
   selector:
     app: web
   ports:

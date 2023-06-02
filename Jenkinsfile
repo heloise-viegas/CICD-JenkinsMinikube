@@ -27,11 +27,10 @@ pipeline{
         stage("Build DockerImage"){
             steps{
                //dir('cd /var/lib/jenkins/workspace/CICD-Minikube/awesome-compose')
-                dir('/var/lib/jenkins/workspace/CICD-Minikube/awesome-compose')
+                dir('/var/lib/jenkins/workspace/CICD-Minikube/awesome-compose/aspnet-mssql/app')
                 {
-                ///aspnet-mssql/app'
-               sh 'pwd'
-                    // sh 'docker build -t demoasp:latest .'
+                       sh 'pwd'
+                       sh 'docker build -t demoasp:latest .'
                 }
             }
             post{

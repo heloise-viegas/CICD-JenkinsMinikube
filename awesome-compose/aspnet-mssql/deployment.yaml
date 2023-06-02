@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: web 
-          image: pocimage
+          image: aspdemo
           imagePullPolicy: Never 
           #503694153160.dkr.ecr.us-east-2.amazonaws.com/eks-asp-demo:latest
           # busybox

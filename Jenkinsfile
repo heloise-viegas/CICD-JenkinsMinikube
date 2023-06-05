@@ -32,7 +32,7 @@ pipeline{
                 {
                        sh 'pwd'
                       // sh 'docker run hadolint/hadolint:v1.10.3 | Dockerfile'
-                       sh 'docker run --rm -i hadolint/hadolint < Dockerfile'
+                       sh 'docker run --rm -i hadolint/hadolint:v1.10.3 < Dockerfile'
                        //sh 'hadolint Dockerfile | tee -a hadolint_lint.txt'
                        sh 'docker build -t demoasp:latest .'
                 }

@@ -31,9 +31,9 @@ pipeline{
                 dir('/var/lib/jenkins/workspace/CICD-Minikube/awesome-compose/aspnet-mssql/app')
                 {
                        sh 'pwd'
-                      // sh 'docker run hadolint/hadolint:v1.10.3 | Dockerfile'
-                       sh 'docker run --rm -i hadolint/hadolint:v1.10.3'
-                       sh 'hadolint Dockerfile | tee -a hadolint_lint.txt'
+                       sh 'docker run hadolint/hadolint:v1.10.3 > Dockerfile'
+                      // sh 'docker run --rm -i hadolint/hadolint:v1.10.3'
+                       //sh 'hadolint Dockerfile | tee -a hadolint_lint.txt'
                        sh 'docker build -t demoasp:latest .'
                 }
             }

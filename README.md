@@ -5,3 +5,7 @@ https://www.digitalocean.com/community/tutorials/how-to-install-jenkins-on-ubunt
 
 ## code
 https://gist.github.com/KatyaKaratnyk/e3df3076e38b9ae7f41988285b725dca
+
+
+##
+https://sweetcode.io/how-to-deploy-an-application-to-kubernetes-cluster-using-jenkins-ci-cd-pipeline/

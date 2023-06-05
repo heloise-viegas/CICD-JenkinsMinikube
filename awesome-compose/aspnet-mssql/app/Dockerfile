@@ -13,8 +13,8 @@ RUN dotnet restore && dotnet clean aspnetapp.sln --configuration Release && dotn
 # publish your code in release mode and save output to publish directory
 # RUN dotnet publish -c Release -o /publish   
 
-//FROM base as test
-//CMD ["dotnet", "test"]
+#FROM base as test
+#CMD ["dotnet", "test"]
 
 ENV ASPNETCORE_URLS=http://+:5000
 EXPOSE 5000

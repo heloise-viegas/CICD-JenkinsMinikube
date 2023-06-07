@@ -88,13 +88,17 @@ pipeline{
             steps{
             //   sh 'kubectl get pods'
           
-             withKubeConfig(caCertificate: '',
-                            clusterName: 'minikube', 
-                            contextName: 'minikube', 
-                            credentialsId: 'kubeconfig', 
-                            namespace: 'default', 
-                            restrictKubeConfigAccess: false, 
-                            serverUrl: 'https://127.0.0.1:32769') {
+//              withKubeConfig(caCertificate: '',
+//                             clusterName: 'minikube', 
+//                             contextName: 'minikube', 
+//                             credentialsId: 'kubeconfig', 
+//                             namespace: 'default', 
+//                             restrictKubeConfigAccess: false, 
+//                             serverUrl: 'https://127.0.0.1:32769')
+                withKubeConfig(caCertificate: '', clusterName: '', contextName: '', credentialsId: 'minikube', namespace: '', 
+                               restrictKubeConfigAccess: false, serverUrl: '')
+                
+                {
                  sh 'kubectl config use-context minikube'
                  
                  sh 'kubectl delete -f /var/lib/jenkins/workspace/CICD-Minikube/awesome-compose/aspnet-mssql/deployment.yaml'

@@ -87,7 +87,7 @@ pipeline{
         stage("Indentifying misconfigs using datree"){
             steps{
                 withEnv(['DATREE_TOKEN=3AM1Uoiecruzfi5qqPe7BL']) {
-                              sh 'datree test *.yaml --only-k8s-files'
+                              sh 'kubectl datree test *.yaml --only-k8s-files'
                         }
             }
             post{

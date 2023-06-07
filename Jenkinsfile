@@ -95,8 +95,8 @@ pipeline{
 //                             namespace: 'default', 
 //                             restrictKubeConfigAccess: false, 
 //                             serverUrl: 'https://127.0.0.1:32769')
-                withKubeConfig(caCertificate: '', clusterName: '', contextName: '', credentialsId: 'minikube', namespace: '', 
-                               restrictKubeConfigAccess: false, serverUrl: '')
+               withKubeConfig(caCertificate: '', clusterName: '', contextName: '', credentialsId: 'minikube', namespace: '',
+                              restrictKubeConfigAccess: false, serverUrl: '') 
                 
                 {
                  sh 'kubectl config use-context minikube'
